@@ -11,7 +11,7 @@ var id = "rng_theory_daily270";
 var name = "RNG Theory";
 var description = "Study six-digit numbers, publish your discoveries and collect 177 roles.";
 var authors = "RNG Theory Project";
-var version = 5; // RNG Theory 1.4
+var version = 6; // RNG Theory 1.4.1
 
 
 var config = {
@@ -8199,7 +8199,7 @@ function init() {
     rho = theory.createCurrency();
     for (let i = 0; i < 7; i++) {
         let u = theory.createUpgrade(i, rho, new ExponentialCost(big(config.logPrices[i]), Math.log2(config.ratios[i])));
-        u.getDescription = () => tr().variables[i] + "  " + symbols[i] + " = " + effects(i, u.level);
+        u.getDescription = (_amount) => tr().variables[i] + "  " + symbols[i] + " = " + effects(i, u.level);
         u.getInfo = amount => tr().variableHelp[i] + "\n" + effects(i, u.level) + " → " + effects(i, u.level + Math.max(1, amount));
         u.bought = amount => {
             if (amount > 0)
@@ -8214,8 +8214,8 @@ function init() {
     ];
     theory.setMilestoneCost(new CustomCost(i => BigNumber.from(config.thresholds[Math.min(8, i)])));
     milestone = theory.createMilestoneUpgrade(0, 9);
-    milestone.canBeRefunded = () => false;
-    milestone.boughtOrRefunded = () => {
+    milestone.canBeRefunded = (_amount) => false;
+    milestone.boughtOrRefunded = (_amount) => {
         updateAvailability();
         invalidate();
     };
@@ -8281,7 +8281,7 @@ var postPublish = () => {
 var getTau = () => state.peak === -300 ? rho.value : rho.value.max(big(state.peak));
 var getCurrencyFromTau = tau => [tau, rho.symbol];
 var getPublicationMultiplier = tau => big(publicationLog(tau.max(BigNumber.ONE).log10().toNumber()));
-var getPublicationMultiplierFormula = () => "10^{F(\\log_{10}\\tau)}";
+var getPublicationMultiplierFormula = (_symbol) => "10^{F(\\log_{10}\\tau)}";
 var getPrimaryEquation = () => "\\dot\\rho= B_{\\rm pub}\\, n\\,\\frac{G_j}{11}\\,F_{CD}";
 var getSecondaryEquation = () => {
     let e = current();
