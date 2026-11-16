@@ -8,11 +8,11 @@ import { ui } from "./api/ui/UI";
 import { LayoutOptions } from "./api/ui/properties/LayoutOptions";
 import { FontAttributes } from "./api/ui/properties/FontAttributes";
 // Installation metadata must be literal values: the SDK evaluates it separately.
-var id = "rng_theory_daily270";
+var id = "rng_theory";
 var name = "RNG Theory";
 var description = "Study six-digit numbers, publish your discoveries and collect 177 roles.";
 var authors = "Maimai";
-var version = 9; // RNG Theory 1.4.4
+var version = 10; // RNG Theory 1.4.5
 
 
 var config = {
@@ -89384,192 +89384,7 @@ var visualGroupData = [
   ]
 ];
 
-var strings = {
-  "en": {
-    "description": "Find patterns in six-digit numbers. Invest in probability, publish your theory and discover 177 roles.",
-    "journal": "Field journal",
-    "atlas": "Role encyclopedia",
-    "stats": "Statistics",
-    "settings": "Settings",
-    "help": "Field guide",
-    "close": "Close",
-    "back": "Back",
-    "next": "Next",
-    "previous": "Previous",
-    "list": "Browse all roles",
-    "collection": "Collection",
-    "missing": "Undiscovered",
-    "found": "Discovered",
-    "new": "New discoveries",
-    "recent": "Recent finds",
-    "rarest": "Rarest finds",
-    "families": "By family",
-    "all": "All",
-    "family": "Family",
-    "status": "Status",
-    "sort": "Sort",
-    "sorts": [
-      "Name",
-      "Rarity",
-      "Discovery date",
-      "Current odds · most likely first"
-    ],
-    "search": "Search names, aliases or conditions",
-    "noResults": "No matching roles",
-    "none": "None yet",
-    "production": "Production role",
-    "display": "Collection only",
-    "base": "Exact odds · uniform roll",
-    "current": "Current odds · one observation",
-    "condition": "Condition",
-    "example": "Example",
-    "aliases": "Also known as",
-    "related": "Overlaps at base odds",
-    "both": "joint outcomes",
-    "locked": "Opens at M",
-    "observeAt": "Discovery at M",
-    "scoreAt": "Production at M",
-    "captured": "Discovered at",
-    "matches": "Same observed outcome",
-    "history": "Discovery history",
-    "newAt": "New in this observation",
-    "seen": "Read discoveries",
-    "day": "d",
-    "format": "Numbers",
-    "formats": [
-      "Game format",
-      "Scientific"
-    ],
-    "layout": "Journal view",
-    "layouts": [
-      "Detailed",
-      "Compact"
-    ],
-    "notices": "Discovery notices",
-    "autoPub": "Publish at +6 orders",
-    "offlinePub": "Allow automatic publication during catch-up",
-    "yes": "On",
-    "no": "Off",
-    "time": "Elapsed playtime",
-    "offline": "Offline time",
-    "lifetime": "Lifetime ρ produced",
-    "rate": "Production / s",
-    "mult": "Publication multiplier",
-    "pubs": "Publications",
-    "buys": "Purchased levels",
-    "sig": "Active signatures",
-    "obs": "Expected observations",
-    "obsRate": "Observations / min",
-    "nextM": "Next milestone",
-    "maxM": "All milestones allocated",
-    "pubNext": "Next publication multiplier",
-    "cFactor": "Critical expectation",
-    "dFactor": "Item expectation",
-    "joint": "Combined event factor",
-    "score": "Mean roll reward after CD conversion",
-    "savedError": "The journal save could not be read. A fresh journal was opened.",
-    "more": "More overlaps",
-    "page": "Page",
-    "roll": "Roll speed",
-    "luck": "Luck",
-    "power": "Rarity Power",
-    "levels": "Upgrades",
-    "goal": "Publication target",
-    "noOverlap": "No shared outcomes",
-    "return": "Return to journal",
-    "unread": "Unread",
-    "variables": [
-      "Roll speed",
-      "Luck",
-      "Rarity Power",
-      "Critical chance",
-      "Critical multiplier",
-      "Item drop chance",
-      "Item value"
-    ],
-    "variableHelp": [
-      "Raises the number of production rolls per second.",
-      "Tilts the outcome distribution toward rarer signatures.",
-      "Raises the reward paid by a rare signature.",
-      "Raises the chance of a critical roll.",
-      "Raises the value of each critical roll.",
-      "Raises the probability of an item drop.",
-      "Raises the reward from each item."
-    ],
-    "milestones": [
-      "Luck",
-      "Symmetry and periodicity",
-      "Runs, sequences and digit patterns",
-      "Critical rewards",
-      "Number theory and constants",
-      "Item drops",
-      "References and near misses",
-      "Composite signatures and precision observation",
-      "Voidborn"
-    ],
-    "mHelp": [
-      "Enable the Luck upgrade.",
-      "Score symmetry and repeating blocks.",
-      "Activate 14 more scoring roles and open digit-pattern discoveries.",
-      "Enable critical chance and value.",
-      "Score arithmetic, constants and digit sums.",
-      "Enable item chance and item value.",
-      "Discover special numbers, references and near misses.",
-      "Score composite combinations, boost simultaneous critical drops and increase observation frequency.",
-      "Convert part of Luck to Rarity Power."
-    ],
-    "guide": [
-      "A roll is a six-digit string from 000000 to 999999. Leading zeros count toward patterns. A number can wear several badges.",
-      "A signature lists its active scoring roles. A combination shared by fewer numbers carries more information. Production uses the expected reward over all outcomes.",
-      "Roll speed raises throughput. Luck favors rarer signatures. Rarity Power raises their payout. The bounded conversion smooths the reward when new families open.",
-      "Buy the free Buy All and Auto-Buyer upgrades, then enable auto-buy in the game. In Efficiency priority mode, use Buy all in the Field journal for manual bulk purchases. Game priority mode also supports the game's Buy All button.",
-      "M4 opens critical chance and value. M6 opens item chance and value. At M8 a critical item drop receives an extra joint reward. At M9 Luck also raises Rarity Power.",
-      "Spend milestone points in order. Publication exchanges current progress for a multiplier and resets ordinary levels. The journal and permanent upgrades survive. Automatic publication is optional.",
-      "Observations use current Luck and run separately from production. Open each role to compare exact base odds with current odds. At M8 precision observations help uncover rare near misses.",
-      "Read a discovery to see all roles from that same outcome. Collection dates are elapsed theory time. Locked roles remain visible and can be collected once their discovery milestone opens.",
-      "Live rolls are Luck-weighted previews. Open Recent rolls to inspect the last 20. Discovery banners show real collection events. In the encyclopedia, combine rarity and family filters or sort by current odds."
-    ],
-    "familyNames": {
-      "Multiplicity": "Digit multiplicity",
-      "Symmetry": "Symmetry",
-      "Periodicity": "Periodicity",
-      "Runs": "Repeated digits",
-      "Sequences": "Sequences",
-      "Arithmetic": "Number theory",
-      "Composition": "Digit composition",
-      "Constants": "Mathematical constants",
-      "References": "References",
-      "Composites": "Meme combinations",
-      "Near": "Near misses",
-      "Special": "Special patterns"
-    },
-    "tiers": {
-      "Common": "Common",
-      "Uncommon": "Uncommon",
-      "Rare": "Rare",
-      "Epic": "Epic",
-      "Anomaly": "Anomaly",
-      "Mythic": "Mythic"
-    },
-    "permanentNames": [
-      "Publication",
-      "Buy all",
-      "Auto-buyer"
-    ],
-    "permanentHelp": [
-      "Publish to gain the multiplier shown in Statistics.",
-      "Buy available upgrades together. In Efficiency priority mode, use Buy all in the Field journal.",
-      "Enable the native automatic purchaser after buying this free upgrade."
-    ],
-    "buyer": "Automatic buying",
-    "buyModes": [
-      "Game priority",
-      "Efficiency priority"
-    ],
-    "motion": "Animated reveals",
-    "liveRolls": "Live roll display"
-  }
-};
+var strings = {"en":{"description":"Find patterns in six-digit numbers. Invest in probability, publish your theory and discover 177 roles.","journal":"Field journal","atlas":"Role encyclopedia","stats":"Statistics","settings":"Settings","help":"Field guide","close":"Close","back":"Back","next":"Next","previous":"Previous","list":"Browse all roles","collection":"Collection","missing":"Undiscovered","found":"Discovered","new":"New discoveries","recent":"Recent finds","rarest":"Rarest finds","families":"By family","all":"All","family":"Family","status":"Status","sort":"Sort","sorts":["Name","Rarity","Discovery date","Current odds · most likely first"],"search":"Search names, aliases or conditions","noResults":"No matching roles","none":"None yet","production":"Production role","display":"Collection only","base":"Exact odds · uniform roll","current":"Current odds · one observation","condition":"Condition","example":"Example","aliases":"Also known as","related":"Overlaps at base odds","both":"joint outcomes","locked":"Opens at M","observeAt":"Discovery at M","scoreAt":"Production at M","captured":"Discovered at","matches":"Same observed outcome","history":"Discovery history","newAt":"New in this observation","seen":"Read discoveries","day":"d","format":"Numbers","formats":["Game format","Scientific"],"layout":"Journal view","layouts":["Detailed","Compact"],"notices":"Discovery notices","autoPub":"Publish at +6 orders","offlinePub":"Allow automatic publication during catch-up","yes":"On","no":"Off","time":"Elapsed playtime","offline":"Offline time","lifetime":"Lifetime ρ produced","rate":"Production / s","mult":"Publication multiplier","pubs":"Publications","buys":"Purchased levels","sig":"Active signatures","obs":"Expected observations","obsRate":"Observations / min","nextM":"Next milestone","maxM":"All milestones allocated","pubNext":"Next publication multiplier","cFactor":"Critical expectation","dFactor":"Item expectation","joint":"Combined event factor","score":"Mean roll reward after CD conversion","savedError":"The journal save could not be read. A fresh journal was opened.","more":"More overlaps","page":"Page","roll":"Roll speed","luck":"Luck","power":"Rarity Power","levels":"Upgrades","goal":"Publication target","noOverlap":"No shared outcomes","return":"Return to journal","unread":"Unread","variables":["Roll speed","Luck","Rarity Power","Critical chance","Critical multiplier","Item drop chance","Item value"],"variableHelp":["Raises the number of production rolls per second.","Tilts the outcome distribution toward rarer signatures.","Raises the reward paid by a rare signature.","Raises the chance of a critical roll.","Raises the value of each critical roll.","Raises the probability of an item drop.","Raises the reward from each item."],"milestones":["Luck","Symmetry and periodicity","Runs, sequences and digit patterns","Critical rewards","Number theory and constants","Item drops","References and near misses","Composite signatures and precision observation","Voidborn"],"mHelp":["Enable the Luck upgrade.","Score symmetry and repeating blocks.","Activate 14 more scoring roles and open digit-pattern discoveries.","Enable critical chance and value.","Score arithmetic, constants and digit sums.","Enable item chance and item value.","Discover special numbers, references and near misses.","Score composite combinations, boost simultaneous critical drops and increase observation frequency.","Convert part of Luck to Rarity Power."],"guide":["A roll is a six-digit string from 000000 to 999999. Leading zeros count toward patterns. A number can wear several badges.","A signature lists its active scoring roles. A combination shared by fewer numbers carries more information. Production uses the expected reward over all outcomes.","Roll speed raises throughput. Luck favors rarer signatures. Rarity Power raises their payout. The bounded conversion smooths the reward when new families open.","Unlock the game's Buy All for 1e12 rho and Auto-Buyer for 1e20 rho. Enable auto-buy in the game after unlocking it. Efficiency priority buys by marginal return; Game priority uses the game's purchase order and Buy All button.","M4 opens critical chance and value. M6 opens item chance and value. At M8 a critical item drop receives an extra joint reward. At M9 Luck also raises Rarity Power.","Spend milestone points in order. Publication exchanges current progress for a multiplier and resets ordinary levels. The journal and permanent upgrades survive. Automatic publication is optional.","Observations use current Luck and run separately from production. Open each role to compare exact base odds with current odds. At M8 precision observations help uncover rare near misses.","Read a discovery to see all roles from that same outcome. Collection dates are elapsed theory time. Locked roles remain visible and can be collected once their discovery milestone opens.","Live rolls are Luck-weighted previews. Open Recent rolls to inspect the last 20. Discovery banners show real collection events. In the encyclopedia, combine rarity and family filters or sort by current odds."],"familyNames":{"Multiplicity":"Digit multiplicity","Symmetry":"Symmetry","Periodicity":"Periodicity","Runs":"Repeated digits","Sequences":"Sequences","Arithmetic":"Number theory","Composition":"Digit composition","Constants":"Mathematical constants","References":"References","Composites":"Meme combinations","Near":"Near misses","Special":"Special patterns"},"tiers":{"Common":"Common","Uncommon":"Uncommon","Rare":"Rare","Epic":"Epic","Anomaly":"Anomaly","Mythic":"Mythic"},"permanentNames":["Publication","Buy all","Auto-buyer"],"permanentHelp":["Publish to gain the multiplier shown in Statistics.","Unlock the game's standard Buy All for 1e12 rho.","Unlock the native automatic purchaser for 1e20 rho, then enable auto-buy in the game."],"buyer":"Automatic buying","buyModes":["Game priority","Efficiency priority"],"motion":"Animated reveals","liveRolls":"Live roll display"}};
 
 // Standard Base64, with a reusable ASCII lookup and indexed loops for SDK Jint.
 var base64Values = [];
@@ -90437,8 +90252,8 @@ function init() {
     }
     permanents = [
         theory.createPublicationUpgrade(0, rho, big(6)),
-        theory.createBuyAllUpgrade(1, rho, big(13)),
-        theory.createAutoBuyerUpgrade(2, rho, big(25))
+        theory.createBuyAllUpgrade(1, rho, big(12)),
+        theory.createAutoBuyerUpgrade(2, rho, big(20))
     ];
     theory.setMilestoneCost(new CustomCost(i => BigNumber.from(config.thresholds[Math.min(8, i)])));
     milestone = theory.createMilestoneUpgrade(0, 9);
@@ -90458,17 +90273,6 @@ function invalidate() {
 }
 function current() {
     return economic(milestone.level, regular.map(u => u.level));
-}
-// Native bulk buying remains available when efficiency purchasing is active.
-function buyAll() {
-    if (!theory.isBuyAllAvailable)
-        return;
-    game.buy(regular, -1, true);
-    productionCache = null;
-    lastRate = null;
-    invalidate();
-    if (dialog)
-        paint();
 }
 // Main SDK tick: production and purchases, then discovery notices and visuals.
 var tick = (elapsed, multiplier) => {
@@ -90641,8 +90445,6 @@ function home() {
         children.push(label("Catching up on saved elapsed time. Please wait before buying, changing milestones or publishing."));
     if (state.pending.length)
         children.push(button(t.seen + "  ·  " + state.pending.length, showInbox));
-    if (theory.isBuyAllAvailable)
-        children.push(button(t.permanentNames[1], buyAll));
     children.push(button("Recent rolls", () => go("rolls")), button(t.list, () => go("browse")), pair(button(t.history, () => go("history", 0)), button(t.stats, () => go("stats"))), pair(button(t.help, () => go("help")), button(t.settings, () => go("settings"))));
     if (!state.compact) {
         let recent = Object.keys(state.found).map(id => roleById[id]).sort((a, b) => state.found[roles[b].id] - state.found[roles[a].id]);
